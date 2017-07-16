@@ -96,6 +96,9 @@ void *birnd_new(t_symbol *s, long argc, t_atom *argv)
     floatin(x,2);
     x->b_outlet1 = intout((t_object *)x);
     
+    x->b_p = (double)0.5;
+    x->b_n = (long)10;
+    
     long i;
     for(i = 0; i < argc && i < 2; i++) {
         if((argv+i)->a_type == A_FLOAT || (argv+i)->a_type == A_LONG) {
@@ -103,12 +106,6 @@ void *birnd_new(t_symbol *s, long argc, t_atom *argv)
                 x->b_p = trunc_helper_p((double)atom_getfloat(argv+i));
             } else {
                 x->b_n = trunc_helper_n((long)atom_getlong(argv+i));
-            }
-        } else {
-            if(i == 0) {
-                x->b_p = (double)0.5;
-            } else {
-                x->b_n = (long)10;
             }
         }
     }
