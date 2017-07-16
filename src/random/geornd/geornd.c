@@ -1,6 +1,6 @@
 /********************************************************
-*	geornd - geometric random number generator for Max  *
-*	developed by Masaki Nabeshima                       *
+*   geornd - geometric random number generator for Max  *
+*   developed by Masaki Nabeshima                       *
 *********************************************************/
 
 #include "ext.h"
@@ -46,14 +46,14 @@ void geornd_bang(t_geornd *x) {
         do {
             rnd = (double)rand()/(double)RAND_MAX;
             num++;
-        } while(rnd > x->g_p);
+        } while(rnd >= x->g_p);
     }
     
     outlet_int(x->g_outlet1, num);
 }
 
 void geornd_ft1(t_geornd *x, double f) {
-    /* f must be in range (0, 1] */
+    /* f must be in range [0, 1] */
     x->g_p = trunc_helper(f);
 }
 

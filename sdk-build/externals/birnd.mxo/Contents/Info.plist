@@ -7,11 +7,13 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>English</string>
 	<key>CFBundleExecutable</key>
-	<string>geornd</string>
+	<string>birnd</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.cycling74.birnd</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.1.4</string>
 	<key>CFBundleLongVersionString</key>
-	<string>geornd 6.1.4, Copyright 2013 Cycling '74</string>
+	<string>birnd 6.1.4, Copyright 2013 Cycling '74</string>
 	<key>CFBundlePackageType</key>
 	<string>iLaX</string>
 	<key>CFBundleShortVersionString</key>
