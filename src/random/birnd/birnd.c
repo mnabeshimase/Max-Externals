@@ -48,7 +48,7 @@ void birnd_bang(t_birnd *x) {
     long i;
     for(i = 0; i < x->b_n; i++) {
         rnd = (double)rand()/(double)RAND_MAX;
-        if(rnd < x->b_p) {
+        if(rnd <= x->b_p) {
             num++;
         }
     }
