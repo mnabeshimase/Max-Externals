@@ -46,7 +46,7 @@ void geornd_bang(t_geornd *x) {
         do {
             rnd = (double)rand()/(double)RAND_MAX;
             num++;
-        } while(rnd >= x->g_p);
+        } while(rnd > x->g_p);
     }
     
     outlet_int(x->g_outlet1, num);
